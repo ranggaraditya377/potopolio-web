@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Raditya</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans dark:bg-white dark:text-gray-900">
+
+  <!-- Navbar Utama -->
+  <header class="fixed w-full bg-gray-800 dark:bg-gray-200 bg-opacity-90 shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <h1 data-lang="title" class="text-2xl font-bold text-yellow-400">My Portfolio</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" data-lang="nav_home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" data-lang="nav_about" class="hover:text-yellow-400">About</a></li>
+        <li><a href="#skills" data-lang="nav_skills" class="hover:text-yellow-400">Skills</a></li>
+        <li><a href="#hobbies" data-lang="nav_hobbies" class="hover:text-yellow-400">Hobbies</a></li>
+        <li><a href="#projects" data-lang="nav_projects" class="hover:text-yellow-400">Projects</a></li>
+        <li><a href="#maps" class="hover:text-yellow-400">Maps</a></li>
+        <li><a href="#clock-section" class="hover:text-yellow-400">Clock</a></li>
+      </ul>
+      <div class="flex space-x-2">
+        <!-- Toggle Dark Mode -->
+        <button id="toggleDark" class="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400">
+          🌙
+        </button>
+        <!-- Toggle Language -->
+        <button id="toggleLang" class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-400">
+          EN
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 dark:bg-gray-100 px-6">
+    <img src="foto.png.jpg" alt="Profile" 
+         class="w-40 h-40 md:w-52 md:h-52 rounded-full mx-auto shadow-lg border-4 border-yellow-400">
+    <h2 data-lang="hero_title" class="text-5xl md:text-6xl font-extrabold text-yellow-400 mt-6">
+      Hello, I'm Raditya
+    </h2>
+    <p data-lang="hero_sub" class="mt-4 text-xl">Frontend Developer & Gamer</p>
+    <a href="#projects" data-lang="btn_view" class="mt-6 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">
+      Lihat Proyek
+    </a>
+  </section>
+
+  <!-- Navbar Jam Digital -->
+  <nav class="bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-900 px-6 py-3 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h2 data-lang="clock_title" class="text-xl font-bold">Digital Clock</h2>
+      <button id="toggle24" class="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400">
+        24h
+      </button>
+    </div>
+  </nav>
+
+  <!-- Section Jam Digital -->
+  <section id="clock-section" class="py-16 bg-gray-800 dark:bg-gray-200">
+    <div class="max-w-md w-full p-6 rounded-2xl bg-gray-900 dark:bg-white shadow-lg border border-gray-700 dark:border-gray-300 mx-auto text-center">
+      <div id="clock" class="mono text-5xl md:text-7xl font-extrabold tracking-wider">00:00:00</div>
+      <div id="ampm" class="mt-2 text-sm text-gray-400 dark:text-gray-700"></div>
+      <div id="date" class="mt-4 text-center text-sm text-gray-400 dark:text-gray-700"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto py-20 px-6">
+    <h3 data-lang="about_title" class="text-3xl font-semibold text-center mb-6">About Me</h3>
+    <p data-lang="about_text" class="text-center max-w-3xl mx-auto text-gray-300 dark:text-gray-700">
+      Saya seorang Frontend Developer yang memiliki minat besar pada desain UI/UX dan juga aktif di dunia eSports. 
+      Berpengalaman membangun website responsif, modern, dan interaktif.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-800 dark:bg-gray-100 py-20 px-6">
+    <h3 data-lang="skills_title" class="text-3xl font-semibold text-center mb-6">Skills</h3>
+    <div class="grid md:grid-cols-3 gap-6 container mx-auto text-center">
+      <div class="p-6 bg-gray-700 dark:bg-white dark:text-gray-900 rounded-lg">HTML, CSS, JS</div>
+      <div class="p-6 bg-gray-700 dark:bg-white dark:text-gray-900 rounded-lg">Tailwind, React</div>
+      <div class="p-6 bg-gray-700 dark:bg-white dark:text-gray-900 rounded-lg">UI/UX Design</div>
+    </div>
+  </section>
+
+  <!-- Hobbies -->
+  <section id="hobbies" class="container mx-auto py-20 px-6">
+    <h3 data-lang="hobbies_title" class="text-3xl font-semibold text-center mb-6">Hobbies</h3>
+    <div class="grid md:grid-cols-2 gap-6 text-center">
+      <div class="p-6 bg-gray-700 dark:bg-white dark:text-gray-900 rounded-lg">Catur</div>
+      <div class="p-6 bg-gray-700 dark:bg-white dark:text-gray-900 rounded-lg">Renang</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container mx-auto py-20 px-6">
+    <h3 data-lang="projects_title" class="text-3xl font-semibold text-center mb-6">Projects</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-gray-200 text-black p-6 rounded-lg shadow-lg">
+        <h4 class="font-bold">Portfolio Website</h4>
+        <p class="text-sm mt-2">Website portofolio pribadi dengan fitur dark mode dan multi bahasa.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-200 text-black p-6 rounded-lg shadow-lg">
+        <h4 class="font-bold">E-Commerce Website</h4>
+        <p class="text-sm mt-2">Demo website e-commerce dengan React dan Tailwind.</p>
+        <a href="https://e-commerce-two-bay-38.vercel.app/" target="_blank" class="mt-3 inline-block bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400">Lihat Website</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maps -->
+  <section id="maps" class="container mx-auto py-20 px-6">
+    <h3 class="text-3xl font-semibold text-center mb-6">Alamat Saya</h3>
+    <div class="rounded-lg overflow-hidden shadow-lg border border-gray-700 dark:border-gray-300">
+      <iframe 
+        src="https://www.google.com/maps?q=-8.1140388,115.0778081&hl=id&z=18&output=embed" 
+        width="100%" height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-gray-200 py-6 text-center text-gray-400 dark:text-gray-700">
+    <p data-lang="footer">&copy; 2025 Raditya. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // === Dark Mode ===
+    const btnDark = document.getElementById("toggleDark");
+    const html = document.documentElement;
+    btnDark.addEventListener("click", () => {
+      html.classList.toggle("dark");
+      btnDark.textContent = html.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // === Multi Language ===
+    const btnLang = document.getElementById("toggleLang");
+    let currentLang = "id";
+    const translations = {
+      id: {
+        title: "Portofolio Saya",
+        nav_home: "Home",
+        nav_about: "Tentang",
+        nav_skills: "Keahlian",
+        nav_hobbies: "Hobi",
+        nav_projects: "Proyek",
+        hero_title: "Halo, Saya Raditya",
+        hero_sub: "Frontend Developer & Gamer",
+        btn_view: "Lihat Proyek",
+        about_title: "Tentang Saya",
+        about_text: "Saya seorang Frontend Developer yang memiliki minat besar pada desain UI/UX dan juga aktif di dunia eSports. Berpengalaman membangun website responsif, modern, dan interaktif.",
+        skills_title: "Keahlian",
+        hobbies_title: "Hobi",
+        projects_title: "Proyek",
+        clock_title: "Jam Digital",
+        footer: "© 2025 Raditya. Semua Hak Dilindungi."
+      },
+      en: {
+        title: "My Portfolio",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_hobbies: "Hobbies",
+        nav_projects: "Projects",
+        hero_title: "Hello, I'm Raditya",
+        hero_sub: "Frontend Developer & Gamer",
+        btn_view: "View Projects",
+        about_title: "About Me",
+        about_text: "I am a Frontend Developer passionate about UI/UX design and also active in eSports. Experienced in building responsive, modern, and interactive websites.",
+        skills_title: "Skills",
+        hobbies_title: "Hobbies",
+        projects_title: "Projects",
+        clock_title: "Digital Clock",
+        footer: "© 2025 Raditya. All Rights Reserved."
+      }
+    };
+    function changeLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        el.textContent = translations[lang][key];
+      });
+    }
+    btnLang.addEventListener("click", () => {
+      currentLang = currentLang === "id" ? "en" : "id";
+      changeLanguage(currentLang);
+      btnLang.textContent = currentLang === "id" ? "EN" : "ID";
+    });
+    changeLanguage("id");
+
+    // === Digital Clock ===
+    const clockEl = document.getElementById("clock");
+    const dateEl = document.getElementById("date");
+    const ampmEl = document.getElementById("ampm");
+    const toggle24Btn = document.getElementById("toggle24");
+    let use24 = true;
+
+    function two(n){ return n<10 ? "0"+n : n; }
+    function formatDate(d){
+      const daysID = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+      const monthsID = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+      const daysEN = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      const monthsEN = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const lang = currentLang;
+      const dayName = lang === "id" ? daysID[d.getDay()] : daysEN[d.getDay()];
+      const monthName = lang === "id" ? monthsID[d.getMonth()] : monthsEN[d.getMonth()];
+      return `${dayName}, ${two(d.getDate())} ${monthName} ${d.getFullYear()}`;
+    }
+    function updateClock(){
+      const now = new Date();
+      let h = now.getHours();
+      let m = now.getMinutes();
+      let s = now.getSeconds();
+      let ampm = "";
+      if(!use24){
+        ampm = h>=12 ? "PM":"AM";
+        h = h%12; if(h===0) h=12;
+      }
+      clockEl.textContent = `${two(h)}:${two(m)}:${two(s)}`;
+      ampmEl.textContent = use24 ? "" : ampm;
+      dateEl.textContent = formatDate(now);
+    }
+    setInterval(updateClock,1000);
+    updateClock();
+    toggle24Btn.addEventListener("click",()=>{
+      use24=!use24;
+      toggle24Btn.textContent = use24?"24h":"12h";
+      updateClock();
+    });
+  </script>
+</body>
+</html>
